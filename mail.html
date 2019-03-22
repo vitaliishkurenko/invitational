@@ -1,0 +1,48 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Вам письмо!</title>
+    <meta charset="UTF-8">
+    <style>
+    .center-img {
+        border-radius: 1em;
+        padding: 1em;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-right: -50%;
+        transform: translate(-50%, -50%) 
+        }
+    </style>
+</head>
+
+<body>
+    <script language="javascript">
+        var image = null;
+        var i = 0;
+
+        var imgs = new Array('https://image.flaticon.com/icons/svg/340/340214.svg', 'https://image.flaticon.com/icons/svg/340/340218.svg', 'https://image.flaticon.com/icons/svg/448/448027.svg', 'http://cs622030.vk.me/v622030198/116a6/epNO4kDDVAY.jpg');
+
+        function onDocumentReady() {
+            image = document.getElementById("image");
+        }
+
+        function imgsrc() {
+            i++;
+            if (i == imgs.length)
+                i = 0;
+
+            image.src = imgs[i];
+        }
+
+        document.addEventListener("DOMContentLoaded", onDocumentReady);
+
+    </script>
+    <p class="center-img">
+        <img id="image" src="https://image.flaticon.com/icons/svg/340/340214.svg" width="500" height="500"
+            onClick="imgsrc();" />
+    </p>
+</body>
+
+</html>
